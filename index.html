@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d2b">
+<meta name="description" content="EL Cultivo delivers turnkey polyhouse, greenhouse, hydroponic, shade net and floriculture solutions across India.">
+<title>EL Cultivo | Modern Protected Cultivation Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--forest:#173f2d;--green:#4c8d39;--lime:#8fc641;--ink:#1d2a22;--muted:#65736a;--cream:#f6f8f2;--white:#fff;--line:#e6ece3;--shadow:0 18px 55px rgba(20,55,35,.11)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1160px,90%);margin:auto}
+.topbar{background:var(--forest);color:#e9f3e7;font-size:.82rem;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.topbar i{color:#a8d66b;margin-right:7px}
+header{height:86px;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(20,60,35,.08);backdrop-filter:blur(14px)}
+.nav-wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand img{width:205px;height:70px;object-fit:contain;object-position:left center}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none;font-weight:600;font-size:.94rem}
+.nav-links a{transition:.2s}.nav-links a:hover{color:var(--green)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--forest);color:#fff;padding:14px 23px;border-radius:5px;font-weight:700;transition:.25s;border:1px solid var(--forest)}
+.nav-cta:hover,.btn:hover{background:var(--green);border-color:var(--green);transform:translateY(-2px)}
+.menu-toggle{display:none;background:none;border:0;color:var(--forest);font-size:1.5rem;padding:8px}
+.hero{min-height:660px;display:flex;align-items:center;color:#fff;position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(8,35,22,.88) 0%,rgba(8,35,22,.68) 48%,rgba(8,35,22,.16) 100%),url('image-78.jpg') center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,rgba(7,31,20,.25));z-index:-1}
+.hero-content{max-width:720px;padding:95px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#d6f1ad;text-transform:uppercase;letter-spacing:2px;font-size:.76rem;font-weight:800;margin-bottom:20px}
+.eyebrow:before{content:"";width:30px;height:2px;background:var(--lime)}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.16}
+.hero h1{font-size:clamp(2.6rem,5.3vw,4.7rem);letter-spacing:-2px;max-width:760px;margin-bottom:23px}
+.hero h1 span{color:#a9d66a}
+.hero p{font-size:1.12rem;max-width:590px;color:#e3ece4;margin-bottom:32px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn-light{background:#fff;color:var(--forest);border-color:#fff}.btn-light:hover{background:#eaf4e4;color:var(--forest);border-color:#eaf4e4}
+.trust-strip{background:var(--cream);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:25px 0}
+.trust-item{display:flex;align-items:center;gap:13px}
+.trust-item i{font-size:1.35rem;color:var(--green)}
+.trust-item strong{display:block;font-family:Manrope;font-size:.95rem}
+.trust-item small{color:var(--muted);font-size:.8rem}
+section{padding:94px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 48px}
+.kicker{color:var(--green);font-size:.76rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:clamp(2rem,3.5vw,3rem);color:var(--forest);letter-spacing:-1.2px;margin-bottom:14px}
+.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:490px;object-fit:cover;border-radius:7px;box-shadow:var(--shadow)}
+.photo-note{position:absolute;right:-18px;bottom:25px;background:var(--forest);color:#fff;padding:20px 25px;border-radius:5px;max-width:230px;box-shadow:var(--shadow)}
+.photo-note strong{display:block;font:800 1.5rem Manrope;color:#b5dc79}
+.about-copy h2{font-size:clamp(2rem,3.4vw,2.8rem);color:var(--forest);margin-bottom:20px;letter-spacing:-1px}
+.about-copy p{color:var(--muted);margin-bottom:16px}
+.check-list{list-style:none;margin:25px 0 30px;display:grid;gap:12px}
+.check-list li{font-weight:600}.check-list i{color:var(--green);margin-right:10px}
+.services{background:var(--cream)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:#fff;padding:30px 27px;border:1px solid var(--line);border-radius:7px;transition:.25s}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#c8ddb9}
+.service-icon{width:54px;height:54px;border-radius:50%;background:#edf5e7;color:var(--green);display:grid;place-items:center;font-size:1.35rem;margin-bottom:22px}
+.service-card h3{font-size:1.18rem;color:var(--forest);margin-bottom:11px}
+.service-card p{font-size:.93rem;color:var(--muted)}
+.service-card a{display:inline-block;margin-top:19px;color:var(--green);font-weight:700;font-size:.9rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-card{position:relative;overflow:hidden;border-radius:7px;background:#dce8d8;min-height:260px}
+.gallery-card img{width:100%;height:290px;object-fit:cover;transition:transform .5s}
+.gallery-card:hover img{transform:scale(1.06)}
+.gallery-label{position:absolute;inset:auto 0 0;padding:40px 20px 18px;color:#fff;background:linear-gradient(transparent,rgba(8,34,20,.82));font:700 1.05rem Manrope}
+.why{background:var(--forest);color:#fff}
+.why .section-head h2{color:#fff}.why .section-head p{color:#c5d4c8}.why .kicker{color:#b3db79}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-item{border-left:1px solid rgba(255,255,255,.2);padding:8px 0 8px 22px}
+.why-item i{font-size:1.65rem;color:#a8d66b;margin-bottom:18px}
+.why-item h3{font-size:1.05rem;margin-bottom:9px}.why-item p{color:#c5d4c8;font-size:.9rem}
+.contact{background:#f4f7f0}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+.contact-copy h2{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--forest);margin-bottom:17px}
+.contact-copy>p{color:var(--muted);margin-bottom:28px}
+.contact-detail{display:flex;gap:14px;align-items:center;margin:19px 0}
+.contact-detail i{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#e4efdc;color:var(--green)}
+.contact-detail small{display:block;color:var(--muted)}
+.contact-detail strong{font-size:.96rem}
+.contact-box{background:#fff;padding:34px;border-radius:8px;box-shadow:var(--shadow)}
+.contact-box h3{font-size:1.35rem;color:var(--forest);margin-bottom:7px}
+.contact-box>p{font-size:.9rem;color:var(--muted);margin-bottom:23px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{margin-bottom:15px}.field.full{grid-column:1/-1}
+.field label{display:block;font-size:.83rem;font-weight:700;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid #dce4d9;border-radius:5px;font:inherit;background:#fff;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(76,141,57,.1)}
+.field textarea{min-height:105px;resize:vertical}
+.submit{width:100%;cursor:pointer;font:700 1rem 'DM Sans'}
+footer{background:#102f21;color:#d5e1d7;padding:62px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr;gap:50px;margin-bottom:40px}
+.footer-logo{width:190px;background:#fff;border-radius:4px;padding:4px;margin-bottom:17px}
+footer h3{color:#fff;font-size:1.05rem;margin-bottom:17px}
+footer p,footer a{font-size:.9rem;color:#c0cec3}
+footer a{display:block;margin:9px 0}footer a:hover{color:#b5dc79}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.82rem;color:#aebeb2}
+.whatsapp{position:fixed;right:23px;bottom:23px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#20bd5a;color:#fff;font-size:1.9rem;box-shadow:0 8px 25px #0003;z-index:900;transition:.2s}
+.whatsapp:hover{transform:translateY(-4px) scale(1.04)}
+@media(max-width:900px){.nav-links{gap:16px;font-size:.86rem}.nav-cta{padding:11px 14px}.about-grid{gap:35px}.trust-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{gap:30px}}
+@media(max-width:700px){.topbar .container{justify-content:center}.topbar .top-right{display:none}header{height:74px}.brand img{width:170px;height:62px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;padding:18px 5% 25px;box-shadow:0 15px 20px #0001;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links li a{display:block;padding:12px 0}.nav-links .nav-cta{text-align:center;margin-top:8px}.hero{min-height:620px;background-position:58% center}.hero-content{padding:80px 0}.hero h1{letter-spacing:-1px}.hero p{font-size:1rem}.hero-actions .btn{width:100%}section{padding:70px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.about-photo img{height:330px}.photo-note{right:10px;bottom:12px}.service-grid{grid-template-columns:1fr 1fr;gap:13px}.service-card{padding:22px 18px}.gallery-grid{grid-template-columns:1fr 1fr;gap:12px}.gallery-card,.gallery-card img{min-height:190px;height:190px}.why-grid{gap:24px 12px}.why-item{padding-left:14px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-grid>div:first-child{grid-column:1/-1}.contact-box{padding:25px 19px}}
+@media(max-width:430px){.service-grid,.gallery-grid{grid-template-columns:1fr}.gallery-card,.gallery-card img{height:230px}.trust-grid{gap:16px}.trust-item{align-items:flex-start}.trust-item strong{font-size:.86rem}.trust-item small{font-size:.74rem}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span><i class="fa-solid fa-leaf"></i> Cultivating smarter farms across India</span><span class="top-right"><i class="fa-solid fa-phone"></i> +91 97179 15256 &nbsp; <i class="fa-solid fa-envelope"></i> agrotechkanishka@gmail.com</span></div></div>
+<header><div class="container nav-wrap">
+<a class="brand" href="#home" aria-label="EL Cultivo home"><img src="el-cultivo-logo.png" alt="EL Cultivo — cultivate your passion"></a>
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Solutions</a></li><li><a href="#gallery">Our Projects</a></li><li><a class="nav-cta" href="#contact">Get Consultation <i class="fa-solid fa-arrow-right"></i></a></li>
+</ul></div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<div class="eyebrow">Protected cultivation specialists</div>
+<h1>Grow smarter. <span>Harvest better.</span></h1>
+<p>Build a more productive future with complete turnkey solutions for polyhouses, greenhouses, hydroponics and modern protected cultivation.</p>
+<div class="hero-actions"><a class="btn btn-light" href="#contact">Discuss Your Project <i class="fa-solid fa-arrow-right"></i></a><a class="btn" href="https://wa.me/919717915256" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat with an Expert</a></div>
+</div></div></section>
+<div class="trust-strip"><div class="container trust-grid">
+<div class="trust-item"><i class="fa-solid fa-house-chimney"></i><div><strong>Turnkey Projects</strong><small>From concept to completion</small></div></div>
+<div class="trust-item"><i class="fa-solid fa-seedling"></i><div><strong>Modern Farming</strong><small>Smarter growing systems</small></div></div>
+<div class="trust-item"><i class="fa-solid fa-compass-drafting"></i><div><strong>Project Planning</strong><small>Solutions for your land & crop</small></div></div>
+<div class="trust-item"><i class="fa-solid fa-headset"></i><div><strong>Expert Support</strong><small>Guidance at every step</small></div></div>
+</div></div>
+<section id="about"><div class="container about-grid">
+<div class="about-photo"><img src="image-74.jpg" alt="Healthy crops growing inside a modern greenhouse" loading="lazy"><div class="photo-note"><strong>EL Cultivo</strong><span>cultivate your passion</span></div></div>
+<div class="about-copy"><div class="kicker">Who we are</div><h2>Helping your farm reach its full potential</h2>
+<p>EL Cultivo provides protected cultivation solutions for farmers and agri-entrepreneurs. We work across greenhouse and polyhouse structures, shade net houses, hydroponic systems and commercial floriculture projects.</p>
+<p>From planning and structure selection to installation guidance, our focus is to help you choose a practical growing solution for your crop, climate and available land.</p>
+<ul class="check-list"><li><i class="fa-solid fa-circle-check"></i> End-to-end project assistance</li><li><i class="fa-solid fa-circle-check"></i> Solutions tailored to your requirements</li><li><i class="fa-solid fa-circle-check"></i> Support for modern cultivation methods</li></ul>
+<a class="btn" href="#contact">Know More About Us <i class="fa-solid fa-arrow-right"></i></a></div>
+</div></section>
+<section class="services" id="services"><div class="container"><div class="section-head"><div class="kicker">What we do</div><h2>Complete cultivation solutions</h2><p>Explore practical infrastructure and expert assistance designed around your agricultural goals.</p></div>
+<div class="service-grid">
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-warehouse"></i></div><h3>Greenhouse Solutions</h3><p>Controlled growing environments designed to support quality production across seasons.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-house"></i></div><h3>Polyhouse Construction</h3><p>Naturally ventilated and climate-managed polyhouse structures planned around your crop.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-umbrella"></i></div><h3>Shade Net Houses</h3><p>Protective structures for nurseries, vegetables, flowers and other cultivation needs.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-droplet"></i></div><h3>Hydroponic Farming</h3><p>Soilless cultivation options including NFT, DWC and cocopeat-based growing systems.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-spa"></i></div><h3>Floriculture Projects</h3><p>Commercial flower cultivation infrastructure for crops such as gerbera, rose and lilium.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+<article class="service-card"><div class="service-icon"><i class="fa-solid fa-clipboard-check"></i></div><h3>Project Consultancy</h3><p>Planning support, crop selection guidance and assistance in understanding project requirements.</p><a href="#contact">Enquire now <i class="fa-solid fa-arrow-right"></i></a></article>
+</div></div></section>
+<section id="gallery"><div class="container"><div class="section-head"><div class="kicker">Our work & infrastructure</div><h2>Built for better growing</h2><p>A look at protected cultivation structures and growing environments.</p></div>
+<div class="gallery-grid">
+<div class="gallery-card"><img src="image-78.jpg" alt="Polyhouse structure and cultivated farm" loading="lazy"><div class="gallery-label">Polyhouse Farming</div></div>
+<div class="gallery-card"><img src="image-76.jpg" alt="Hydroponic leafy greens system" loading="lazy"><div class="gallery-label">Hydroponic Systems</div></div>
+<div class="gallery-card"><img src="image-75.jpg" alt="Colourful flowers inside greenhouse" loading="lazy"><div class="gallery-label">Floriculture Projects</div></div>
+<div class="gallery-card"><img src="image-80.jpg" alt="Greenhouse frame under construction" loading="lazy"><div class="gallery-label">Structure Installation</div></div>
+<div class="gallery-card"><img src="image-79.jpg" alt="Modern greenhouse exterior" loading="lazy"><div class="gallery-label">Greenhouse Structures</div></div>
+<div class="gallery-card"><img src="image-73.jpg" alt="Multiple protected cultivation tunnels" loading="lazy"><div class="gallery-label">Turnkey Farm Projects</div></div>
+</div></div></section>
+<section class="why"><div class="container"><div class="section-head"><div class="kicker">The EL Cultivo approach</div><h2>Why work with us?</h2><p>Thoughtful planning and dependable project support for your cultivation journey.</p></div>
+<div class="why-grid">
+<div class="why-item"><i class="fa-solid fa-list-check"></i><h3>Turnkey Approach</h3><p>One coordinated approach from planning through project execution.</p></div>
+<div class="why-item"><i class="fa-solid fa-map-location-dot"></i><h3>Pan-India Enquiries</h3><p>Connect with us about projects across India.</p></div>
+<div class="why-item"><i class="fa-solid fa-seedling"></i><h3>Crop-focused Planning</h3><p>Discuss structures and systems based on your growing goals.</p></div>
+<div class="why-item"><i class="fa-solid fa-people-group"></i><h3>Personal Support</h3><p>Get guidance as you plan your protected cultivation project.</p></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="container contact-grid">
+<div class="contact-copy"><div class="kicker">Let's grow together</div><h2>Tell us about your project</h2><p>Share a few details about your land and cultivation plans. Our team can connect with you to discuss the next steps.</p>
+<div class="contact-detail"><i class="fa-solid fa-phone"></i><div><small>Call us</small><strong>+91 97179 15256</strong></div></div>
+<div class="contact-detail"><i class="fa-solid fa-envelope"></i><div><small>Email us</small><strong>agrotechkanishka@gmail.com</strong></div></div>
+<div class="contact-detail"><i class="fa-solid fa-location-dot"></i><div><small>Based in</small><strong>Greater Noida, Uttar Pradesh</strong></div></div>
+</div>
+<div class="contact-box"><h3>Request a consultation</h3><p>Fill in the form and continue directly to WhatsApp.</p>
+<form id="enquiryForm"><div class="form-grid">
+<div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div>
+<div class="field"><label for="phone">Mobile number *</label><input id="phone" name="phone" type="tel" required placeholder="Enter mobile number"></div>
+<div class="field full"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="Enter email address"></div>
+<div class="field full"><label for="service">Interested in *</label><select id="service" name="service" required><option value="">Select a service</option><option>Polyhouse Construction</option><option>Greenhouse</option><option>Shade Net House</option><option>Hydroponic Farming</option><option>Floriculture Project</option><option>Project Consultancy</option><option>Other</option></select></div>
+<div class="field full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us about your land size, location and requirements"></textarea></div>
+</div><button class="btn submit" type="submit">Continue on WhatsApp <i class="fa-brands fa-whatsapp"></i></button></form>
+</div></div></section>
+</main>
+<footer><div class="container"><div class="footer-grid">
+<div><img class="footer-logo" src="el-cultivo-logo.png" alt="EL Cultivo logo"><p>Modern protected cultivation solutions to help farmers and agri-entrepreneurs grow with confidence.</p></div>
+<div><h3>Explore</h3><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Solutions</a><a href="#gallery">Our Projects</a><a href="#contact">Contact</a></div>
+<div><h3>Get in touch</h3><p><i class="fa-solid fa-location-dot"></i> Greater Noida, Uttar Pradesh</p><p><i class="fa-solid fa-phone"></i> +91 97179 15256</p><p><i class="fa-solid fa-envelope"></i> agrotechkanishka@gmail.com</p></div>
+</div><div class="footer-bottom"><span>© <span id="year"></span> EL Cultivo. All rights reserved.</span><span>cultivate your passion</span></div></div></footer>
+<a class="whatsapp" href="https://wa.me/919717915256?text=Hello%20EL%20Cultivo%2C%20I%20would%20like%20to%20know%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with EL Cultivo on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<script>
+const menuBtn=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.nav-links');
+menuBtn.addEventListener('click',()=>{const opened=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',opened);menuBtn.innerHTML=opened?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const msg=`Hello EL Cultivo, I would like to enquire about your services.%0A%0AName: ${encodeURIComponent(d.get('name'))}%0AMobile: ${encodeURIComponent(d.get('phone'))}%0AEmail: ${encodeURIComponent(d.get('email')||'Not provided')}%0AInterested in: ${encodeURIComponent(d.get('service'))}%0AProject details: ${encodeURIComponent(d.get('message')||'Not provided')}`;window.open('https://wa.me/919717915256?text='+msg,'_blank','noopener');});
+</script>
+</body></html>
