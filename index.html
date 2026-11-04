@@ -21,57 +21,87 @@
 
     /* ========== NAVBAR ========== */
     nav {
-      background: #fff;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 0 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 75px;
-    }
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #1a7a4c;
-      text-decoration: none;
-    }
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #1a7a4c;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .logo span {
-      color: #2d9b6a;
-    }
+.logo span {
+  color: #2d9b6a;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.02rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
 
-    .nav-links a:hover {
-      color: #1a7a4c;
-    }
+.nav-links a:hover {
+  color: #1a7a4c;
+}
 
-    .nav-btn {
-      background: #1a7a4c;
-      color: white !important;
-      padding: 10px 22px;
-      border-radius: 6px;
-    }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #1a7a4c;
+  transition: 0.3s;
+}
 
-    .nav-btn:hover {
-      background: #14633d !important;
-    }
+.nav-links a:hover::after {
+  width: 100%;
+}
 
+.nav-btn {
+  background: linear-gradient(135deg, #1a7a4c, #2d9b6a) !important;
+  color: white !important;
+  padding: 11px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #14633d, #1a7a4c) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(26, 122, 76, 0.3);
+}
+
+.nav-btn::after {
+  display: none !important;
+}
+    
     /* ========== HERO ========== */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
@@ -333,18 +363,20 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#" class="logo">EL <span>Cultivo</span></a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Projects</a></li>
-      <li><a href="#contact" class="nav-btn">Get Free Consultation</a></li>
-    </ul>
-  </nav>
-
+<!-- NAVBAR -->
+  
+<nav>
+  <a href="#" class="logo">
+    <!-
+    EL <span>Cultivo</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Projects</a></li>
+    <li><a href="#contact" class="nav-btn">Get Free Consultation</a></li>
+  </ul>
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
@@ -411,18 +443,14 @@
   </section>
 
   <!-- GALLERY -->
-  <section id="gallery">
-    <div class="section-title">
-      <h2>Project Gallery</h2>
-      <p>Some of our successfully delivered projects</p>
-    </div>
-    <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800" alt="Polyhouse Project">
-      <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?q=80&w=800" alt="Greenhouse Interior">
-      <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=800" alt="Hydroponics">
-      <img src="https://images.unsplash.com/photo-1466692476866-aef5ad40dcc4?q=80&w=800" alt="Floriculture">
-    </div>
-  </section>
+  <div class="gallery-grid">
+  <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" alt="Polyhouse">
+  <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?auto=format&fit=crop&w=800&q=80" alt="Greenhouse">
+  <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=800&q=80" alt="Hydroponics">
+  <img src="https://images.unsplash.com/photo-1466692476866-aef5ad40dcc4?auto=format&fit=crop&w=800&q=80" alt="Floriculture">
+  <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80" alt="Farming">
+  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Agriculture">
+</div>
 
   <!-- WHY CHOOSE US -->
   <section style="background: white;">
