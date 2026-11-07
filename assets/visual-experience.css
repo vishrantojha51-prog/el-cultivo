@@ -189,3 +189,20 @@ body[data-page-bg] .whatsapp { z-index: 1100; }
 @media (prefers-reduced-motion: reduce) {
   .site-backdrop::before { animation: none !important; transform: none !important; }
 }
+
+/* Fix: keep the header CTA readable against its dark button background. */
+body[data-page-bg] .nav-links a.nav-cta,
+body[data-page-bg] .nav-links a.nav-cta:link,
+body[data-page-bg] .nav-links a.nav-cta:visited,
+body[data-page-bg] .nav-links a.nav-cta:hover,
+body[data-page-bg] .nav-links a.nav-cta:focus {
+  color: #ffffff !important;
+  background: #173f2d;
+  border-color: #173f2d;
+  text-shadow: none;
+}
+body[data-page-bg] .nav-links a.nav-cta:hover {
+  background: #4c8d39;
+  border-color: #4c8d39;
+}
+body[data-page-bg] .nav-links a.nav-cta i { color: #ffffff !important; }
