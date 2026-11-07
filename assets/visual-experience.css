@@ -1,0 +1,191 @@
+/* EL Cultivo — page-specific living agriculture background.
+   This file is intentionally separate from style.css for safe rollback. */
+html { background: #102f21; }
+body[data-page-bg] {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  background: transparent !important;
+  color: #f7fbf5;
+}
+body[data-page-bg] > .site-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: #173b29;
+}
+.site-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.04);
+  animation: elc-background-drift 38s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.site-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5,24,15,.56), rgba(7,31,19,.62) 48%, rgba(5,25,16,.78)),
+    linear-gradient(90deg, rgba(5,25,16,.24), transparent 60%);
+}
+body[data-page-bg="about"] .site-backdrop::before { background-image: url("image-80.jpg"); }
+body[data-page-bg="solutions"] .site-backdrop::before { background-image: url("image-76.jpg"); }
+body[data-page-bg="projects"] .site-backdrop::before { background-image: url("image-78.jpg"); }
+body[data-page-bg="contact"] .site-backdrop::before { background-image: url("image-73.jpg"); }
+
+.site-backdrop video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes elc-background-drift {
+  0%   { transform: scale(1.04) translate3d(-.6%, -.4%, 0); }
+  100% { transform: scale(1.12) translate3d(.7%, .5%, 0); }
+}
+
+/* Transparent page sections let the same themed scene continue from header to footer. */
+body[data-page-bg] main,
+body[data-page-bg] section,
+body[data-page-bg] .trust-strip {
+  background: transparent !important;
+}
+body[data-page-bg="home"] .hero {
+  background-image: linear-gradient(90deg, rgba(5,29,17,.82), rgba(5,29,17,.48) 55%, rgba(5,29,17,.18)) !important;
+  background-color: transparent !important;
+}
+body[data-page-bg] header {
+  background: rgba(248,252,247,.91);
+  border-bottom: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 10px 35px rgba(0,0,0,.13);
+  backdrop-filter: blur(16px);
+}
+body[data-page-bg] .topbar {
+  background: rgba(7,35,22,.72);
+  backdrop-filter: blur(12px);
+}
+body[data-page-bg] .page-hero {
+  background: transparent !important;
+  min-height: 340px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+body[data-page-bg] .page-hero h1,
+body[data-page-bg] .hero h1,
+body[data-page-bg] .section-head h2,
+body[data-page-bg] .contact-copy h2 {
+  color: #fff;
+  text-shadow: 0 3px 24px rgba(0,0,0,.28);
+}
+body[data-page-bg] .page-hero p,
+body[data-page-bg] .section-head p,
+body[data-page-bg] .contact-copy > p {
+  color: rgba(248,252,247,.9);
+}
+body[data-page-bg] .kicker,
+body[data-page-bg] .eyebrow {
+  color: #d5f1a8;
+}
+body[data-page-bg] .kicker {
+  background: rgba(16,57,35,.52);
+  border: 1px solid rgba(216,245,185,.22);
+  border-radius: 999px;
+  padding: 7px 13px;
+  backdrop-filter: blur(8px);
+}
+body[data-page-bg] .trust-strip {
+  border-color: rgba(255,255,255,.15);
+  background: rgba(9,39,24,.58) !important;
+  color: #fff;
+  backdrop-filter: blur(14px);
+}
+body[data-page-bg] .trust-item strong,
+body[data-page-bg] .trust-item small { color: #f5faf2; }
+body[data-page-bg] .service-card,
+body[data-page-bg] .dynamic-card,
+body[data-page-bg] .why-item,
+body[data-page-bg] .contact-box,
+body[data-page-bg] .about-copy {
+  background: rgba(248,252,247,.91) !important;
+  border: 1px solid rgba(255,255,255,.62);
+  box-shadow: 0 18px 48px rgba(0,0,0,.17);
+  backdrop-filter: blur(13px);
+  border-radius: 18px;
+}
+body[data-page-bg] .service-card h3,
+body[data-page-bg] .dynamic-card h3,
+body[data-page-bg] .why-item h3,
+body[data-page-bg] .about-copy h2,
+body[data-page-bg] .contact-box h3 {
+  color: #173f2d;
+}
+body[data-page-bg] .service-card p,
+body[data-page-bg] .dynamic-card p,
+body[data-page-bg] .why-item p,
+body[data-page-bg] .about-copy p,
+body[data-page-bg] .contact-box p {
+  color: #52665a;
+}
+body[data-page-bg] .contact-copy {
+  padding: clamp(20px, 3vw, 34px);
+  border-radius: 18px;
+  background: rgba(8,38,23,.68);
+  border: 1px solid rgba(255,255,255,.17);
+  backdrop-filter: blur(12px);
+}
+body[data-page-bg] .contact-detail,
+body[data-page-bg] .contact-detail strong,
+body[data-page-bg] .contact-detail small { color: #fff; }
+body[data-page-bg] .contact-detail i {
+  background: rgba(211,239,184,.17);
+  color: #c9ee93;
+}
+body[data-page-bg] .photo-note {
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 15px 35px rgba(0,0,0,.22);
+}
+body[data-page-bg] footer {
+  background: rgba(5,29,18,.88) !important;
+  border-top: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(16px);
+}
+body[data-page-bg] .empty-note {
+  background: rgba(248,252,247,.9);
+  color: #52665a;
+  border-color: rgba(255,255,255,.65);
+}
+body[data-page-bg] .nav-links a { color: #173f2d; }
+body[data-page-bg] .nav-links a:hover,
+body[data-page-bg] .nav-links a.active { color: #4c8d39; }
+body[data-page-bg] .menu-toggle { color: #173f2d; }
+
+/* Product/project photos remain the actual foreground images; background never replaces them. */
+body[data-page-bg] .gallery-card,
+body[data-page-bg] .about-photo img,
+body[data-page-bg] .dynamic-card img {
+  box-shadow: 0 16px 42px rgba(0,0,0,.2);
+}
+body[data-page-bg] .section-head { max-width: 760px; }
+body[data-page-bg] .whatsapp { z-index: 1100; }
+
+@media (max-width: 700px) {
+  body[data-page-bg] header { background: rgba(250,253,249,.96); }
+  body[data-page-bg] .page-hero { min-height: 300px; }
+  body[data-page-bg] .site-backdrop::after {
+    background: linear-gradient(180deg, rgba(5,24,15,.62), rgba(7,31,19,.67) 55%, rgba(5,25,16,.82));
+  }
+  body[data-page-bg] .contact-copy { padding: 22px 18px; }
+  body[data-page-bg] .site-backdrop video { object-position: 58% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-backdrop::before { animation: none !important; transform: none !important; }
+}
