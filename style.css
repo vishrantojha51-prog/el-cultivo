@@ -88,7 +88,7 @@ section{padding:94px 0}
 .submit{width:100%;cursor:pointer;font:700 1rem 'DM Sans'}
 footer{background:#102f21;color:#d5e1d7;padding:62px 0 22px}
 .footer-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr;gap:50px;margin-bottom:40px}
-.footer-logo{width:190px;background:#fff;border-radius:4px;padding:4px;margin-bottom:17px}
+.footer-logo{width:190px;background:rgba(255,255,255,.96);border-radius:8px;padding:8px;margin-bottom:17px;display:block;object-fit:contain}
 footer h3{color:#fff;font-size:1.05rem;margin-bottom:17px}
 footer p,footer a{font-size:.9rem;color:#c0cec3}
 footer a{display:block;margin:9px 0}footer a:hover{color:#b5dc79}
